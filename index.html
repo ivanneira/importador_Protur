@@ -2,18 +2,59 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Importador</title>
+
+    <!--jQuery js-->
+    <script src="node_modules/jquery/dist/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+
+    <!--Bootstrap css-->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--User css-->
+    <link href="styles.css" rel="stylesheet">
+
   </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+  <body class="bg-info">
+
+  <div class="container">
+
+    <div class="row">
+
+
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-12">
+        <br>
+        <p>Coso para importar</p>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-12">
+        <button class="btn btn-success btn-block" id="selectFile">Seleccionar Archivo</button>
+
+        <button class="btn btn-primary btn-block" id="help">Ayuda</button>
+      </div>
+    </div>
+
+  </div>
+
   </body>
+
+  <!--Bootstrap js-->
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!--Script de usuario-->
+  <script src="script.js"></script>
 
   <script>
     // You can also require other files to run in this process
     require('./renderer.js')
+
+    var fs = require('fs');
+    var async = require('async');
+
+    //diálogos
+    const {dialog} = require('electron').remote
+
+
   </script>
+
 </html>

@@ -10,10 +10,20 @@ const url = require('url')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+//let editorWindow
 
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
+  /*
+  editorWindow = new BrowserWindow({width: 800, height: 600})
+  editorWindow.on('closed', () => {
+    editorWindow = null
+  })*/
+
+
+  //editorWindow.loadURL('https://github.com')
+
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -23,7 +33,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

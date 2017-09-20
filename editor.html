@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-grid.css.map">
+    <link rel="stylesheet" href="bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <p class="text-danger">Revise si estos datos son correctos, si están duplicados, puede borrarlos</p>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12">
+            <table id="dataTable" ></table>
+        </div>
+
+    </div>
+</div>
+
+
+
+</body>
+
+
+<script>
+    // You can also require other files to run in this process
+    require('./renderer.js');
+    require('./editor.js');
+
+</script>
+
+</html>
